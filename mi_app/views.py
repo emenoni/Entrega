@@ -5,7 +5,7 @@ from mi_app.models import familia
 
 def listar_familia (request):
     context = {}
-    context ["familiares"] = familia.objects.all()
+    context ["familia"] = familia.objects.all()
 
     return render(request, "mi_app/lista_familia.html", context)
 

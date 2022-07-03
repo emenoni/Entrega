@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    
     <ul>
-        {% for abc in familia %}
-        <li> {{familia}}</li>
+        {% for xx in familia %}
+        <li> {{xx.nombre}} {{xx.apellido}}, edad {{xx.edad}}</li>
         {% endfor %}
     </ul>
     
