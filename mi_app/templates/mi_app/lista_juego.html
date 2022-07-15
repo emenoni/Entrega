@@ -1,0 +1,17 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+
+{% block body %}
+
+<body>
+    
+    <ul>
+        {% for juego in juegos %}
+        <li> Nombre: {{juego.nombre}}, Máx. Jugadores: {{juego.max_jugadores}}, Mín de edad: {{juego.min_edad}}</li>
+        {% endfor %}
+    </ul>
+    
+
+</body>
+
+{% endblock %}

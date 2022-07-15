@@ -1,0 +1,29 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+
+
+ {% block body %}
+<h1>BUSCAR JUEGO</h1>
+
+<form action="" method="get">
+
+<label for="">Ingrese el nombre del juego:</label>
+<input type="text" name = "juego">  <!--Puede ser el nombre que quiera, lo que se ingrese va a quedar guardado en esa variable--->
+                                    <!--"juego" es el nombre que tengo que usar luego en el views.py--->
+
+<input type="submit" value="Buscar">
+</form>
+
+{% for i in buscados %} 
+
+<p>Nombre: {{i.nombre}}</p>
+<p>Máx. de jugadores: {{i.max_jugadores}}</p>
+<p>Min. de edad: {{i.min_edad}}</p>
+
+{% endfor %}
+</body>
+
+{% endblock %}
+</html>
+
+

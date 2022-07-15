@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mi_app.views import listar_familia
+from mi_app.forms import Cargar_auto
+from mi_app.views import buscar_juego, instanciar_familiar, listar_familia, listar_autos, listar_juegos, instanciar_juegos, instanciar_auto
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('familia/', listar_familia),
+    path('juegos/', listar_juegos),
+    path('autos/', listar_autos),
+    path('cargar-juegos', instanciar_juegos),
+    path('cargar-familiar', instanciar_familiar),
+    path('cargar-autos', instanciar_auto),
+    path('buscar-juegos', buscar_juego),
+    
     
 ]

@@ -2,15 +2,14 @@
 {% load static %}
 
 {% block body %}
-
 <body>
     
     <ul>
-        {% for xx in familia %}
-        <li> {{xx.nombre}} {{xx.apellido}}, edad {{xx.edad}}</li>
+        {% for auto in autos %}
+        <li> {{auto.marca}} {{auto.modelo}}, {{auto.año}}</li>
         {% endfor %}
     </ul>
     
-
-</body>
 {% endblock %}
+</body>
+</html>

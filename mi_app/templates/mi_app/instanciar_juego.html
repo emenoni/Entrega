@@ -1,0 +1,24 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+
+{% block body %}
+<body>
+    <h1>INGRESO DE JUEGOS</h1>
+
+    {% if miFormulario.errors %}
+    <p style="color: red;">Están mal los datos, revisar</p>
+    {% endif %}
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+
+            {{ miFormulario.as_table }}
+        
+        </table>
+
+        <input type="submit", value="Enviar">
+    </form>
+</body>
+{% endblock %}
+</html>
